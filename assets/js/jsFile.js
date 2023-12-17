@@ -22,3 +22,13 @@ function youtubeLive(){     //backend -- https://youtubesubscriber-backend-rhdu.
     window.open(url, '_blank');  // // frontend -- https://youtubesubscriber-frontend.onrender.com/
 }
 
+
+document.getElementById('downloadButton').addEventListener('click', function() {
+            var pdfPath = '/assets/cv/cv.pdf';
+            var link = document.createElement('a');
+            link.href = pdfPath;
+            link.download = 'cv.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
